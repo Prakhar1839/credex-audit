@@ -26,7 +26,7 @@ SpendScope is a free web app that audits your team's AI tool spend in 2 minutes 
 ### Run locally (no accounts needed)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/credex-audit
+git clone https://github.com/Prakhar1839/credex-audit
 cd credex-audit
 npm install
 cp .env.example .env.local
