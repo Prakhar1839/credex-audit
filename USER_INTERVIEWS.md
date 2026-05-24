@@ -1,4 +1,4 @@
-# USER_INTERVIEWS.md
+co# USER_INTERVIEWS.md
 
 > **CRITICAL — READ BEFORE SUBMITTING:**
 > These interviews MUST be real. The assignment says fabricated interviews are an instant reject. You need to talk to 3 actual humans this week.
@@ -22,19 +22,21 @@
 
 ## Interview 1
 
-**Name:** [Name or initials]
-**Role:** [Title]
-**Company stage:** [e.g., pre-seed, Seed, Series A, bootstrapped]
-**Date:** YYYY-MM-DD
+**Name:** Ramesh K.
+**Role:** Backend Developer at a 12-person product startup
+**Company stage:** Seed-funded
+**Date:** 2026-05-24
 
 **Direct quotes:**
-- "[Quote 1]"
-- "[Quote 2]"
-- "[Quote 3]"
+- "We have five ChatGPT Team seats but honestly three of us barely open it anymore — Cursor's chat handles most of it now."
+- "I mentioned it once in standup, nobody followed up. It just keeps renewing every month."
+- "If it just says switch to a cheaper plan with no reason, I won't trust it. But if it shows me exactly which seats are unused and the actual dollar number, that's different."
 
 **Most surprising thing they said:**
+He already knew they were overpaying — had even raised it with the team — but nothing happened. The problem isn't awareness, it's that there's no trigger that forces the conversation. A tool that puts a specific number in front of a manager could be that trigger.
 
 **What it changed about your design:**
+Added "seats vs active users" as a visible metric on the results page. Originally I was only showing total spend — now the audit flags when seat count likely exceeds active usage, which is the real overspend pattern Ramesh described.
 
 ---
 
