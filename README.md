@@ -31,7 +31,7 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). The app works fully without any environment variables — it uses a local JSON file store (`.data/`) and logs emails to the console.
+Open [credex-audit.vercel.app](https://credex-audit.vercel.app). The app works fully without any environment variables — it uses a local JSON file store (`.data/`) and logs emails to the console.
 
 ### Add services (optional)
 
