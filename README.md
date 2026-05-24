@@ -2,13 +2,11 @@
 
 SpendScope is a free web app that audits your team's AI tool spend in 2 minutes — surfacing overspend, right-sizing recommendations, and total savings, with no login required. It's a lead-generation tool for Credex, which sells discounted AI infrastructure credits.
 
-**Live:** [spendscope.credex.rocks](https://spendscope.credex.rocks) · **Built for:** startup founders and engineering managers paying for AI tools.
+**Live:** [credex-audit.vercel.app](https://credex-audit.vercel.app) · **Built for:** startup founders and engineering managers paying for AI tools.
 
 ---
 
 ## Screenshots
-
-> Add 3+ screenshots or a 30-second Loom recording here after deploying.
 
 | Landing | Form | Results |
 |---------|------|---------|
@@ -74,4 +72,4 @@ npm test
 
 ## Live URL
 
-[spendscope.credex.rocks](https://spendscope.credex.rocks)
+[credex-audit.vercel.app](https://credex-audit.vercel.app)
