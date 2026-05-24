@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --font-syne: 'Syne', sans-serif;
+  --font-dm-sans: 'DM Sans', sans-serif;
+  --font-jetbrains-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #08080E;
+  color: #EEEEF5;
+}
+
+body {
+  font-family: var(--font-dm-sans);
+  background: #08080E;
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #08080E; }
+::-webkit-scrollbar-thumb { background: #1E1E30; border-radius: 2px; }
+
+/* Selection */
+::selection { background: rgba(0, 232, 122, 0.2); color: #00E87A; }
+
+/* Noise texture overlay */
+.noise-bg::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  z-index: 100;
+}
+
+/* Grid bg */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(30, 30, 48, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 30, 48, 0.4) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Savings number glow */
+.savings-glow {
+  text-shadow: 0 0 40px rgba(0, 232, 122, 0.4), 0 0 80px rgba(0, 232, 122, 0.15);
+}
+
+/* Form styles */
+.field-input {
+  @apply w-full bg-bg-elevated border border-bg-border rounded-lg px-4 py-3 text-text-primary font-body text-sm focus:outline-none focus:border-brand-green/50 focus:ring-1 focus:ring-brand-green/20 transition-all duration-200 placeholder:text-text-muted;
+}
+
+.field-select {
+  @apply field-input appearance-none cursor-pointer;
+}
+
+.btn-primary {
+  @apply bg-brand-green text-bg-base font-display font-700 px-8 py-4 rounded-lg text-sm tracking-wide hover:bg-brand-green/90 active:scale-[0.98] transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply border border-bg-border text-text-primary font-body px-6 py-3 rounded-lg text-sm hover:border-brand-green/40 hover:text-brand-green transition-all duration-150;
+}
+
+.card {
+  @apply bg-bg-surface border border-bg-border rounded-xl p-6;
+}
+
+/* Tag */
+.tag-green {
+  @apply inline-flex items-center gap-1.5 bg-brand-green/10 text-brand-green border border-brand-green/20 rounded-full px-3 py-1 text-xs font-mono font-500;
+}
+
+.tag-red {
+  @apply inline-flex items-center gap-1.5 bg-brand-red/10 text-brand-red border border-brand-red/20 rounded-full px-3 py-1 text-xs font-mono font-500;
+}
+
+.tag-amber {
+  @apply inline-flex items-center gap-1.5 bg-brand-amber/10 text-brand-amber border border-brand-amber/20 rounded-full px-3 py-1 text-xs font-mono font-500;
+}
+
+/* Animate */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.5s ease forwards;
+}
+
+.animate-delay-100 { animation-delay: 0.1s; opacity: 0; }
+.animate-delay-200 { animation-delay: 0.2s; opacity: 0; }
+.animate-delay-300 { animation-delay: 0.3s; opacity: 0; }
+.animate-delay-400 { animation-delay: 0.4s; opacity: 0; }
+.animate-delay-500 { animation-delay: 0.5s; opacity: 0; }
